@@ -13,4 +13,4 @@ This guide provides step-by-step instructions for deploying the Django web appli
 ### Step 1: Spin up the MySQL Database
 Before starting the web application, ensure the database container is active. Run the MySQL container with a Docker volume attached for data persistence:
 ```bash
-docker run -d --name mysql-server -e MYSQL_DATABASE=app_db -e MYSQL_USER=app_user -e MYSQL_PASSWORD=1234 -e MYSQL_ROOT_PASSWORD=root_pass -v mysql_data:/var/lib/mysql mysql:8.0
+docker run -d --name mysql-server -e MYSQL_DATABASE=app_db -e MYSQL_USER=app_user -e MYSQL_PASSWORD=1234 -e MYSQL_ROOT_PASSWORD=root_pass -v mysql_data:/var/lib/mysql mysql-local:1.0.0.

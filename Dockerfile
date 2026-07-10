@@ -1,13 +1,10 @@
-# Stage 1: Build Stage
-ARG PYTHON_VERSION=3.8
-FROM python:${PYTHON_VERSION} AS builder
+FROM python:3.8-slim as  builder
 
-# Set the working directory
 WORKDIR /app
 COPY . .
 
 # Stage 2: Run Stage
-FROM python:${PYTHON_VERSION} AS run
+FROM python:3.8-slim as run
 
 WORKDIR /app
 
